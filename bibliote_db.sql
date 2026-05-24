@@ -29,4 +29,16 @@ constraint pk_libro_autor primary key (la_libro_codigo_fk,la_autor_id_fk )
 );
 select  * from libro_autor;
 
+--insertar datos
+insert into libros(codigo,titulo,paginas)
+values 
+('1','Huasipungo',850),
+('2','Polvo y ceniza',630),
+('3','Siete lunas y siete serpientes',580),
+('4','la iliada',350);
 
+insert into autores(id,nombre,pais)
+values
+(01,'Jorje Icaza','Ecuador'),
+(02,'Luis Martinez','Colombia'),
+(03,'Jorge Davila','Argentina');
