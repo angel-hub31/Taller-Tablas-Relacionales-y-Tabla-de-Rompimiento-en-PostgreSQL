@@ -102,3 +102,8 @@ group by a.id, a.nombre;
 
 alter table libros add precio double precision;
 
+update libros set precio = 15.50 where codigo = '1';
+update libros set precio = 22.99 where codigo = '2';
+update libros set precio = 18.00 where codigo = '3';
+update libros set precio = 12.45 where codigo = '4';
+
