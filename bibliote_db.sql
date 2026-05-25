@@ -81,3 +81,11 @@ select distinct a.nombre, a.pais
 from libro_autor la
 inner join autores a on la.la_autor_id_fk = a.id
 where a.pais ='Ecuador'
+
+-- Consulta 4
+-- Ordenar los libros por año de publicación descendente.
+
+select l.titulo, la.anio_publicacion
+from libro_autor la
+inner join libros l on la.la_libro_codigo_fk =l.codigo
+order by la.anio_publicacion desc;
