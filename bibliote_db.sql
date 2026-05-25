@@ -42,3 +42,11 @@ values
 (01,'Jorje Icaza','Ecuador'),
 (02,'Luis Martinez','Colombia'),
 (03,'Jorge Davila','Argentina');
+
+insert into libro_autor(la_libro_codigo_fk,la_autor_id_fk,anio_publicacion)
+values
+('1',1,1967),
+('2',2,1981),
+('3',3,1963),
+('4',1,1944),
+('2',1,2016);
