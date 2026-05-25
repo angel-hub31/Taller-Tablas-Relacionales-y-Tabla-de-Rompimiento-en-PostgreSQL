@@ -74,6 +74,7 @@ select l.titulo,la.anio_publicacion from libro_autor la
 inner join libros l on la.la_libro_codigo_fk=l.codigo
 where la.anio_publicacion >2020;
 
+
 --consulta 3
 --Mostrar únicamente autores de un país específico usando WHERE.
 
