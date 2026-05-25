@@ -50,3 +50,17 @@ values
 ('3',3,1963),
 ('4',1,1944),
 ('2',1,2016);
+
+
+-- la: tabla de rompimiento
+--la :libro_autor
+--l:libros
+--a: autores
+--fecha en libro_autor
+
+-- consulta 1
+select l.titulo, a.nombre, a.pais, la.anio_publicacion 
+from libro_autor la
+inner join libros l on la.la_libro_codigo_fk = l.codigo
+inner join autores a on la.la_autor_id_fk = a.id;
+
