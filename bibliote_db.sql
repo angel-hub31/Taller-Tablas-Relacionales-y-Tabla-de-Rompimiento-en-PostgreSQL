@@ -99,6 +99,7 @@ from autores a
 inner join libro_autor la on a.id = la.la_autor_id_fk
 group by a.id, a.nombre;
 
+
 --Agregamos una nueva columna a la tabla libros:
 
 alter table libros add precio double precision;
