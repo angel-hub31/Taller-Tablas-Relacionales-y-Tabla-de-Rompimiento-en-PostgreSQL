@@ -49,7 +49,8 @@ values
 ('2',2,1981),
 ('3',3,1963),
 ('4',1,1944),
-('2',1,2016);
+('2',1,2016),
+('3',2,2026);
 
 
 -- la: tabla de rompimiento
@@ -59,8 +60,24 @@ values
 --fecha en libro_autor
 
 -- consulta 1
+--Mostrar:título del libro,nombre del autor,país,año de publicación,Utilizando INNER JOIN.
+
 select l.titulo, a.nombre, a.pais, la.anio_publicacion 
 from libro_autor la
 inner join libros l on la.la_libro_codigo_fk = l.codigo
 inner join autores a on la.la_autor_id_fk = a.id;
 
+--consulta 2
+--Mostrar únicamente libros publicados después del año 2020.
+
+select l.titulo,la.anio_publicacion from libro_autor la
+inner join libros l on la.la_libro_codigo_fk=l.codigo
+where la.anio_publicacion >2020;
+
+--consulta 3
+--Mostrar únicamente autores de un país específico usando WHERE.
+
+select distinct a.nombre, a.pais
+from libro_autor la
+inner join autores a on la.la_autor_id_fk = a.id
+where a.pais ='Ecuador'
