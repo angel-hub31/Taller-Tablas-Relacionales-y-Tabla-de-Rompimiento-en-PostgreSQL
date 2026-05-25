@@ -89,3 +89,16 @@ select l.titulo, la.anio_publicacion
 from libro_autor la
 inner join libros l on la.la_libro_codigo_fk =l.codigo
 order by la.anio_publicacion desc;
+
+-- Consulta 5
+-- Contar cuántos libros tiene cada autor utilizando COUNT() y GROUP BY
+
+select a.nombre, count(la.la_libro_codigo_fk) as total_libros
+from autores a
+inner join libro_autor la on a.id = la.la_autor_id_fk
+group by a.id, a.nombre;
+
+--Agregamos una nueva columna a la tabla libros:
+
+alter table libros add precio double precision;
+
