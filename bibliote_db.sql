@@ -107,3 +107,4 @@ update libros set precio = 22.99 where codigo = '2';
 update libros set precio = 18.00 where codigo = '3';
 update libros set precio = 12.45 where codigo = '4';
 
+select titulo, precio from libros;
